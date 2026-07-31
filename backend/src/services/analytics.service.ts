@@ -1,5 +1,5 @@
 import { UAParser } from "ua-parser-js";
-import { Click } from "../models/Click";
+import { Click } from "../models/Click.js";
 
 export const recordClick = async (
   linkId: string,
