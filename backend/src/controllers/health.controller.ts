@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Link } from "../models/Link";
+import { Link } from "../models/Link.js";
 
 export const checkLinkHealth = async (
   req: Request,

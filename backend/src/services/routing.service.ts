@@ -1,5 +1,5 @@
 import { UAParser } from "ua-parser-js";
-import { ILink } from "../models/Link";
+import { ILink } from "../models/Link.js";
 
 export const resolveDestination = (
   link: ILink,

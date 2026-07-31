@@ -6,11 +6,11 @@ import {
   getLink,
   getLinks,
   updateLink,
-} from "../controllers/link.controller";
+} from "../controllers/link.controller.js";
 
-import { generateQR } from "../controllers/qr.controller";
-import { getAnalytics } from "../controllers/analytics.controller";
-import { checkLinkHealth } from "../controllers/health.controller";
+import { generateQR } from "../controllers/qr.controller.js";
+import { getAnalytics } from "../controllers/analytics.controller.js";
+import { checkLinkHealth } from "../controllers/health.controller.js";
 
 const router = Router();
 

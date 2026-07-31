@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { Link } from "../models/Link.js";
 import { generateShortCode } from "../utils/generateCode.js";
-import { recordClick } from "../services/analytics.service";
-import { resolveDestination } from "../services/routing.service";
+import { recordClick } from "../services/analytics.service.js";
+import { resolveDestination } from "../services/routing.service.js";
 
 
 

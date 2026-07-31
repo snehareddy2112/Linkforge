@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import linkRoutes from "./routes/link.routes";
-import { redirectLink } from "./controllers/link.controller";
+import linkRoutes from "./routes/link.routes.js";
+import { redirectLink } from "./controllers/link.controller.js";
 
 const app = express();
 

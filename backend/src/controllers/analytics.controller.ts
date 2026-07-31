@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import mongoose from "mongoose";
-import { Click } from "../models/Click";
-import { Link } from "../models/Link";
+import { Click } from "../models/Click.js";
+import { Link } from "../models/Link.js";
 
 export const getAnalytics = async (
   req: Request,
