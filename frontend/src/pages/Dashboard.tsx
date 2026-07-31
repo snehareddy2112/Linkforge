@@ -13,7 +13,7 @@ import {
 import CreateLinkModal from "../components/CreateLinkModal";
 import LinkTable from "../components/LinkTable";
 import QRModal from "../components/QRModal";
-import StatsCards from "../components/statsCards";
+import StatsCards from "../components/StatsCards";
 import EditLinkModal from "../components/EditLinkModal";
 import AnalyticsDrawer from "../components/AnalyticsDrawer";
 import CreateQRModal from "../components/CreateQRModal";
@@ -40,6 +40,25 @@ interface QRState {
   shortUrl: string;
 }
 
+interface AnalyticsData {
+  totalClicks: number;
+  devices: {
+    desktop: number;
+    mobile: number;
+    tablet: number;
+  };
+  browsers: Record<string, number>;
+  operatingSystems: Record<string, number>;
+  recentClicks: Array<{
+    _id: string;
+    device: string;
+    browser: string;
+    os: string;
+    referrer: string;
+    createdAt: string;
+  }>;
+}
+
 export default function Dashboard() {
   const [links, setLinks] = useState<SmartLink[]>([]);
   const [loading, setLoading] = useState(true);
@@ -55,7 +74,7 @@ export default function Dashboard() {
     useState<SmartLink | null>(null);
 
   const [analyticsData, setAnalyticsData] =
-    useState<unknown | null>(null);
+    useState<AnalyticsData | null>(null);
 
   const [analyticsLoading, setAnalyticsLoading] =
     useState(false);
